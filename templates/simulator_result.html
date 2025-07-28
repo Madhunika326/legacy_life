@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Simulation Results{% endblock %}
+
+{% block content %}
+<h2 style="text-align:center; margin:20px;">Simulation Results</h2>
+
+<p style="text-align:center;">You selected these organs to donate:</p>
+<ul style="text-align:center; list-style-type:none;">
+    {% for organ in organs %}
+        <li>{{ organ }}</li>
+    {% endfor %}
+</ul>
+
+<p style="text-align:center; font-weight:bold;">💚 Your donation can potentially save <span style="color:green;">{{ lives_saved }}</span> lives!</p>
+
+<div style="text-align:center; margin-top:20px;">
+    <a href="{% url 'simulator_home' %}" style="padding:10px 20px; background:blue; color:white; border:none; border-radius:5px; text-decoration:none;">Try Again</a>
+</div>
+{% endblock %}
