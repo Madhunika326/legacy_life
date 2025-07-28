@@ -16,6 +16,11 @@ urlpatterns = [
 
     # Eligibility check
     path('eligibility/', include('eligibility.urls')),
+
+    # Myth vs Fact check
     path('myths/', include('mythbuster.urls')),
+
+    # Donation Impact Simulator
+    path('simulator/', include('simulator.urls')),
 
 ]
